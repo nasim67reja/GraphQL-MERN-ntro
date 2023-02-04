@@ -1,5 +1,6 @@
 const express = require("express");
 const colors = require("colors");
+const cors = require("cors");
 require("dotenv").config();
 
 const connectDB = require("./config/db");
@@ -20,6 +21,7 @@ const schema = require("./schema/schema");
 
 const app = express();
 
+app.use(cors());
 // Connect to database
 connectDB();
 
